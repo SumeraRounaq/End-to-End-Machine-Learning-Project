@@ -2,6 +2,7 @@ from src.mlproject.components.data_transformation import DataTransformation
 from src.mlproject.logger import logging
 from src.mlproject.exception import CustomException
 from src.mlproject.components.data_ingestion import DataIngestion, DataIngestionConfig
+from src.mlproject.components.model_tranier import ModelTrainerConfig,ModelTrainer
 
 
 import sys
@@ -21,8 +22,8 @@ if __name__=="__main__":
 
         ## Model Training
 
-        #model_trainer=ModelTrainer()
-        #print(model_trainer.initiate_model_trainer(train_arr,test_arr))
+        model_trainer=ModelTrainer()
+        print(model_trainer.initiate_model_trainer(train_arr,test_arr))
         
     except Exception as e:
         logging.info("Custom Exception")
